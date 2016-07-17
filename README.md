@@ -1,5 +1,7 @@
 # Distributed-Messaging
-A demo project which implements RabbitMQ and distributed services.  The goal is to demonstrate error recovery and system stability when issues arise among the integrations
+A demo project which implements RabbitMQ and distributed services.  The goal is to demonstrate error recovery and system stability when issues arise among the integrations.
+
+The OrderEngine, InventoryMgt and DeliveryMgt servers operate a workers for each of their respective queues. The more instnaces you spin up, the more work which gets done.
 
 ##Setup
 Before this demo works, you must set up a RabbitMQ.  When your instance is ready, add the (3) three following queues; make sure each queue is set to Durable and Auto-delete is off.
